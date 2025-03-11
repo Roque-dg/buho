@@ -1,0 +1,242 @@
+@charset "utf-8";
+/* CSS Document */
+/* FUENTE Y ESTILO GENERAL */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(to right, #a8c0ff, #d9a7c7);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+h1 { font-size: 52px;
+}
+h3 {
+    font-family: 'Open Sans', sans-serif;
+    color: #e91e63; /* Color oscuro pero suave */
+	
+}
+h5 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #333;
+	font-size: 14px;
+}
+/* CABECERA INTERACTIVA */
+.header {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 1s forwards;
+}
+
+.cta-button {
+    background: #ff4081;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background: #e91e63;
+}
+
+a {
+    text-decoration: none; /* Quita el subrayado */
+    color: #e91e63; /* coral por defecto */
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+a:hover {
+    color: #ff4500; /* Cambia a un naranja al pasar el mouse */
+    transform: scale(1.05); /* Hace que crezca ligeramente */
+}
+
+
+/* CONTENEDOR DE TRABAJOS */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; /* Espacio entre tarjetas */
+}
+
+/* TARJETA DE TRABAJO */
+.photo-card {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s forwards;
+}
+
+.photo-card:nth-child(1) { animation-delay: 0.3s; }
+.photo-card:nth-child(2) { animation-delay: 0.6s; }
+.photo-card:nth-child(3) { animation-delay: 0.9s; }
+
+.photo-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* IMAGEN */
+.photo-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    margin-right: 20px;
+    border: 2px solid #ccc;
+}
+
+/* TEXTO */
+.text {
+    flex: 1;
+    text-align: left;
+}
+
+/* REACCIÓN - CORAZÓN */
+.heart {
+    font-size: 35px;
+    cursor: pointer;
+    transition: color 0.3s;
+    margin-left: 20px;
+}
+
+.heart.active {
+    color: red;
+}
+
+/* ANIMACIONES */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0.15);
+    }
+}
+.ad-left, .ad-right {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 120px; /* Ajusta el tamaño según necesites */
+    height: auto;
+}
+
+.ad-left {
+    left: 10px;
+}
+
+.ad-right {
+    right: 10px;
+}
+
+.ad-left img, .ad-right img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.main-container {
+    padding-bottom: 80px; /* 🔹 Espacio antes del footer */
+}
+
+
+.footer {
+    background: linear-gradient(90deg, #4a90e2, #9013fe);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 50px; /* 🔹 Aumenta el espacio entre las cajas y el footer */
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px;
+}
+
+.footer nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.footer nav a:hover {
+    color: #ffcc00;
+}
+
+.indicadores {
+    padding: 10px 20px;
+    border-top: 0px solid red;
+    margin-bottom: 20px;
+}
+
+.indicadores h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+}
+
+.indicadores-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.indicador {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+}
+
+.indicador span {
+    font-weight: bold;
+}
+
+.indicador .icono {
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+.indicador .compra {
+    color: blue;
+}
+
+.indicador .venta {
+    color: green;
+}
+
+.indicador .pbi {
+    color: red;
+}
+
+.indicador .inflacion {
+    color: orange;
+}
+
+.indicador .fecha {
+    font-size: 12px;
+    color: gray;
+}
+
