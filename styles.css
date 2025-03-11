@@ -240,3 +240,17 @@ a:hover {
     color: gray;
 }
 
+.anuncio-lateral {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 160px; /* Ajusta el tamaño */
+}
+
+.anuncio-izquierda {
+    left: 10px;
+}
+
+.anuncio-derecha {
+    right: 10px;
+}
